@@ -1,0 +1,138 @@
+[project]
+name = "bison-themes"
+version = "0.1.0"
+description = "Bison 官方主题仓库"
+authors = [
+    {name = "AzideCupric", email = "rukuy@qq.com"},
+]
+dependencies = []
+requires-python = ">=3.10"
+readme = "README.md"
+license = {text = "MIT"}
+
+[tool.mina.packages.arknights-theme]
+includes = [
+    "themes/arknights-theme",
+]
+[tool.mina.packages.arknights-theme.project]
+name = "nonebot-bison-theme-arknights"
+description = "Bison 主题：明日方舟"
+authors = [
+    {name = "AzideCupric", email = "rukuy@qq.com"},
+]
+version = "0.1.0"
+requires-python = ">=3.10"
+dependencies = [
+    "nonebot-plugin-htmlrender>=0.2.2"
+]
+optional-dependencies = []
+entry-points = {pdm = {mina = "mina.plugin:ensure_pdm"}}
+
+[tool.mina.packages.basic-theme]
+includes = [
+    "themes/basic-theme",
+]
+[tool.mina.packages.basic-theme.project]
+name = "nonebot-bison-theme-basic"
+description = "Bison 主题：基础"
+authors = [
+    {name = "AzideCupric", email = "rukuy@qq.com"},
+]
+version = "0.1.0"
+requires-python = ">=3.10"
+dependencies = []
+optional-dependencies = []
+entry-points = {pdm = {mina = "mina.plugin:ensure_pdm"}}
+
+[tool.mina.packages.brief-theme]
+includes = [
+    "themes/brief-theme",
+]
+[tool.mina.packages.brief-theme.project]
+name = "nonebot-bison-theme-brief"
+description = "Bison 主题：简报"
+authors = [
+    {name = "AzideCupric", email = "rukuy@qq.com"},
+]
+version = "0.1.0"
+requires-python = ">=3.10"
+dependencies = []
+optional-dependencies = []
+entry-points = {pdm = {mina = "mina.plugin:ensure_pdm"}}
+
+[tool.mina.packages.ceobecanteen-theme]
+includes = [
+    "themes/ceobecanteen-theme",
+]
+[tool.mina.packages.ceobecanteen-theme.project]
+name = "nonebot-bison-theme-ceobecateen"
+description = "Bison 主题：小刻食堂"
+authors = [
+    {name = "AzideCupric", email = "rukuy@qq.com"},
+]
+version = "0.1.0"
+requires-python = ">=3.10"
+dependencies = [
+    "nonebot-plugin-htmlrender>=0.2.2"
+]
+optional-dependencies = []
+entry-points = {pdm = {mina = "mina.plugin:ensure_pdm"}}
+
+
+[tool.mina.packages.ht2i-theme]
+includes = [
+    "themes/ht2i-theme",
+]
+[tool.mina.packages.ht2i-theme.project]
+name = "nonebot-bison-theme-ht2i"
+description = "Bison 主题：Htmlrender文字转图片"
+authors = [
+    {name = "AzideCupric", email = "rukuy@qq.com"},
+]
+version = "0.1.0"
+requires-python = ">=3.10"
+dependencies = [
+    "nonebot-plugin-htmlrender>=0.2.2"
+]
+optional-dependencies = []
+entry-points = {pdm = {mina = "mina.plugin:ensure_pdm"}}
+
+
+[tool.pdm.dev-dependencies]
+dev = [
+    "pdm-mina>=0.3.1",
+    "nonebot2>=2.1.2",
+    "nonebot-bison @ git+https://github.com/MountainDash/nonebot-bison.git@feat/color-sharp",
+]
+lint = [
+    "ruff>=0.1.3",
+    "isort>=5.12.0",
+]
+
+[build-system]
+requires = ["mina-build>=0.2.5"]
+build-backend = "mina.backend"
+
+[tool.ruff]
+select = ["E", "W", "F", "UP", "C", "T", "PYI", "PT", "Q"]
+ignore = ["E402", "C901", "PT023"]
+
+line-length = 120
+target-version = "py310"
+
+[tool.black]
+line-length = 120
+preview = true
+target-version = ["py310", "py311", "py312"]
+include = '\.pyi?$'
+extend-exclude = '''
+'''
+
+[tool.isort]
+profile = "black"
+line_length = 120
+skip_gitignore = true
+length_sort = true
+force_sort_within_sections = true
+src_paths = ["themes", "tests"]
+extra_standard_library = ["typing_extensions"]
