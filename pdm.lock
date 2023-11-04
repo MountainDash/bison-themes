@@ -5,7 +5,7 @@
 groups = ["default", "dev", "lint"]
 strategy = ["cross_platform"]
 lock_version = "4.4"
-content_hash = "sha256:65785b5d76b5b0865037142503769befe68c915f91aac3e0613b5941a59c15b4"
+content_hash = "sha256:5b6554f1de32655ab74495412330dbd7de9e2d4a8269e185ab69341c48bec374"
 
 [[package]]
 name = "aiofiles"

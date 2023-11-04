@@ -3,7 +3,7 @@ from pydantic import Field, BaseModel, validator
 
 
 class ThemeConfig(BaseModel):
-    max_cut_length: int | None = Field(None, description="最大截断长度, None为不截断")
+    ht2i_max_cut_length: int | None = Field(None, description="最大截断长度, None为不截断")
 
     @validator("max_cut_length")
     def validate_max_cut_length(cls, v):

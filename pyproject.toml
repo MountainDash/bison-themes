@@ -5,7 +5,9 @@ description = "Bison 官方主题仓库"
 authors = [
     {name = "AzideCupric", email = "rukuy@qq.com"},
 ]
-dependencies = []
+dependencies = [
+    "nonebot-plugin-htmlrender>=0.2.2",
+]
 requires-python = ">=3.10"
 readme = "README.md"
 license = {text = "MIT"}
@@ -25,7 +27,6 @@ requires-python = ">=3.10"
 dependencies = [
     "nonebot-plugin-htmlrender>=0.2.2"
 ]
-optional-dependencies = []
 entry-points = {pdm = {mina = "mina.plugin:ensure_pdm"}}
 
 [tool.mina.packages.basic-theme]
@@ -41,7 +42,6 @@ authors = [
 version = "0.1.0"
 requires-python = ">=3.10"
 dependencies = []
-optional-dependencies = []
 entry-points = {pdm = {mina = "mina.plugin:ensure_pdm"}}
 
 [tool.mina.packages.brief-theme]
@@ -57,7 +57,6 @@ authors = [
 version = "0.1.0"
 requires-python = ">=3.10"
 dependencies = []
-optional-dependencies = []
 entry-points = {pdm = {mina = "mina.plugin:ensure_pdm"}}
 
 [tool.mina.packages.ceobecanteen-theme]
@@ -75,7 +74,6 @@ requires-python = ">=3.10"
 dependencies = [
     "nonebot-plugin-htmlrender>=0.2.2"
 ]
-optional-dependencies = []
 entry-points = {pdm = {mina = "mina.plugin:ensure_pdm"}}
 
 
@@ -94,7 +92,6 @@ requires-python = ">=3.10"
 dependencies = [
     "nonebot-plugin-htmlrender>=0.2.2"
 ]
-optional-dependencies = []
 entry-points = {pdm = {mina = "mina.plugin:ensure_pdm"}}
 
 

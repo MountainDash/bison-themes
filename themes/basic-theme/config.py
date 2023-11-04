@@ -3,7 +3,7 @@ from pydantic import Field, BaseModel
 
 
 class ThemeConfig(BaseModel):
-    max_cut_length: int = Field(500, description="最大截断长度")
+    basic_max_cut_length: int = Field(500, description="最大截断长度")
 
 
 class Config(BaseModel):
