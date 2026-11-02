@@ -38,7 +38,7 @@ class Ht2iTheme(Theme):
             _text += (
                 post.content
                 if len(post.content) < theme_config.ht2i_max_cut_length
-                else f"{post.content[:theme_config.ht2i_max_cut_length]}..."
+                else f"{post.content[: theme_config.ht2i_max_cut_length]}..."
             )
         else:
             _text += post.content if len(post.content) < 500 else f"{post.content[:500]}..."

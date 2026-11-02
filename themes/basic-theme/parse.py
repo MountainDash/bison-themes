@@ -27,7 +27,7 @@ class BasicTheme(Theme):
         text += (
             post.content
             if len(post.content) < theme_config.basic_max_cut_length
-            else f"{post.content[:theme_config.basic_max_cut_length]}..."
+            else f"{post.content[: theme_config.basic_max_cut_length]}..."
         )
 
         text += f"\n来源: {post.platform.name} {post.nickname or ''}\n"
